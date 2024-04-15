@@ -48,7 +48,7 @@ namespace Majd.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> RejectEmployer(string userId, string response)
+        public async Task<IActionResult> RejectEmployer(string userId, string? response)
         {
 
             var user = await _userManager.FindByIdAsync(userId);
