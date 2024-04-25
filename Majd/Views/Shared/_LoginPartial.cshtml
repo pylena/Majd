@@ -1,0 +1,41 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Majd.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<ul class="navbar-nav">
+@if (SignInManager.IsSignedIn(User))
+{
+    
+        <li>
+            <div class="frame-3">
+                <img class="frame-1213" src="~/img/frame-1213.svg" alt="Frame 1213" />
+                <div class="frame-1175">
+                    <img class="vector-26" src="~/img/vector-26.svg" alt="Vector 26" />
+                    <a class="text-106 text cairo-12" id="manage" asp-area="Identity" asp-page="/Account/Manage/Profile" title="Manage">حسابك</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="frame">
+                <img class="group-15412" src="~/img/group-15412@2x.png" alt="Group 15412" />
+                <a class="text-1 text cairo-12" asp-controller="Job" asp-action="JobList">الوظائف</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/EmployerLogout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button id="logout" type="submit" class="nav-link btn btn-link text-dark border-0">Logout</button>
+            </form>
+        </li>
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/EmployerRegister">Register</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/EmployerLogin">Login</a>
+    </li>
+}
+</ul>

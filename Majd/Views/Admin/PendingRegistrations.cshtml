@@ -1,0 +1,171 @@
+﻿@model IEnumerable<ApplicationUser>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
+    <!-- <link rel="shortcut icon" type=image/png href="https://animaproject.s3.amazonaws.com/home/favicon.png" /> -->
+    <meta name="viewport" content="width=1440, maximum-scale=1.0" />
+    <link rel="shortcut icon"
+          type="image/png"
+          href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link href="~/css/u1591u1604u1576u1575u1578-u1580u1607u1575u1578-u1575u1604u1593u1605u1604.css" rel="stylesheet" />
+    <link href="~/css/globals.css" rel="stylesheet" />
+    <link href="~/css/styleguide.css" rel="stylesheet" />
+</head>
+<body style="margin: 0; background: #f4f3f8">
+    <input type="hidden"
+           id="anPageName"
+           name="page"
+           value="u1591u1604u1576u1575u1578-u1580u1607u1575u1578-u1575u1604u1593u1605u1604" />
+    <div class="container-center-horizontal">
+        <div class="u1591u1604u1576u1575u1578-u1580u1607u1575u1578-u1575u1604u1593u1605u1604 screen">
+            <div class="navbar">
+                <div class="frame-1-1">
+                    <div class="flex-row">
+                        <div class="view">
+                            <img class="photo_59921654693370"
+                                 src="img/photo-5992165469337010079-y-removebg-preview-1@2x.png"
+                                 alt="photo_5992165469337010079_y-removebg-preview 1" />
+                        </div>
+                        <div class="tab">
+                            <div class="tab-1 cario-20">الاخبار والاعلانات</div>
+                        </div>
+                        <div class="tab-2">
+                            <div class="tab-3 cario-20">عن البوابة</div>
+                        </div>
+                        <div class="tab-4">
+                            <div class="tab-5 cario-20">الرئيسية</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="frame-1190">
+                <div class="frame-container">
+                    <div class="frame-1190-1">
+                        <div class="text-3-1">طلبات جهات العمل</div>
+                    </div>
+                </div>
+                @if (Model.Any()){
+
+
+                    foreach (var user in Model)
+                    {
+                        <div class="frame-154">
+                            <div class="frame-15434">
+                        <div class="frame-154-1">
+                                    <img class="check_circle" src="~/img/check-circle@2x .png" />
+                                    <a class="text cairo-12" asp-controller="Admin" asp-action="ApproveEmployer" asp-route-UserId="@user.Id">قبول</a>
+                        </div>
+                        <div class="frame-154-1">
+                                    <img class="block"src="~/img/block@2x .png" />
+                                    <a class="text cairo-12" asp-controller="Admin" asp-action="RejectEmployer" asp-route-UserId="@user.Id">رفض</a>
+                        </div>
+                    </div>
+                    <div class="frame-15435">
+                        <div class="frame-1">
+                            <div class="frame-15432">
+                                <div class="text-1 text-4 cairo-16-b"> @user.OrganizationName</div>
+                                <div class="text-2 text-4 cairo-12">
+                                    @user.Email
+                                </div>
+                                        <div class="text-2 text-4 cairo-12">
+                                            @user.CareerSectore
+                                        </div>
+                                        <div class="text-2 text-4 cairo-12">
+                                            @user.CommercialRegister
+                                        </div>
+                            </div>
+                        </div>
+                        <img class="rectangle-4774"
+                             src="img/rectangle-4774@2x.png"
+                             alt="Rectangle 4774" />
+                    </div>
+                </div>
+                }}
+                
+            <footer class="footer">
+                <div class="frame-1157">
+                    <div class="frame-1156">
+                        <div class="frame-1155">
+                            <div class="frame-114">
+                                <div class="information cairo-16-b">لدعم الفني</div>
+                                <div class="frame-1 cairo-bold-voodoo-14px">
+                                    <div class="faq">رقم جوال</div>
+                                    <div class="frame-1-item">ايميل</div>
+                                    <div class="frame-1-item">رسالة</div>
+                                </div>
+                            </div>
+                            <div class="frame-114">
+                                <div class="company cairo-16-b">
+                                    الإنضمام الى بوابة الخريجين
+                                </div>
+                                <div class="frame-1144 cairo-bold-voodoo-14px">
+                                    <div class="careers">تسجيل الدخول</div>
+                                    <div class="t-us">تسجيل الدخول كخريج</div>
+                                    <div class="t-us">تسجيل الدخول كجهة عمل</div>
+                                </div>
+                            </div>
+                            <div class="frame-114">
+                                <div class="product cairo-16-b">معلومات عامة</div>
+                                <div class="frame-1 cairo-bold-voodoo-14px">
+                                    <div class="employee-database">عن البوابة</div>
+                                    <div class="payroll">أهداف بوابة الخريجين</div>
+                                    <div class="frame-1-item-1">إحصائيات</div>
+                                    <div class="frame-1-item-1">قصص النجاح</div>
+                                    <div class="frame-1-item-1">تسجيل الدخول</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame-1158">
+                            <h1 class="text-1-1 cairo-36-b">بوابة الخريجين</h1>
+                            <p class="text-2-1">
+                                بوابة متكاملة تمكن الطلاب الخريجين للبحث عن فرص وظيفية وعرض
+                                سيرهم الذاتية إلكترونياً وتمكين الشركات المسجلة في البوابة
+                                بعرض الفرص الوظيفية الشاغرة لديهم، يمكنك الآن التسجيل والتواصل
+                                مع زملائك والاستفادة من خدمات الموقع.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="frame-1152">
+                        <div class="frame-1151">
+                            <div class="group-35">
+                                <div class="overlap-group overlap">
+                                    <img class="icon-lucide-icon"
+                                         src="img/icon-lucide-icon@2x.png"
+                                         alt="Icon/Lucide Icon" />
+                                </div>
+                            </div>
+                            <div class="group-3591">
+                                <div class="group-3590">
+                                    <div class="overlap-group-1">
+                                        <img class="icon-lucide-icon"
+                                             src="img/icon-lucide-icon-1@2x.png"
+                                             alt="Icon/Lucide Icon" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group-35">
+                                <div class="overlap-group1 overlap">
+                                    <img class="icon-lucide-icon"
+                                         src="img/icon-lucide-icon-2@2x.png"
+                                         alt="Icon/Lucide Icon" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame-1150">
+                            <div class="pricing">حقوق النشر محفوظة 2023</div>
+                        </div>
+                        <img class="photo_59921654693370-1"
+                             src="img/photo-5992165469337010079-y-removebg-preview-1@2x.png"
+                             alt="photo_5992165469337010079_y-removebg-preview 1" />
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
